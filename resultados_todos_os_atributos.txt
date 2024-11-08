@@ -1,0 +1,454 @@
+DADOS DE TREINO E TESTE
+
+TODOS
+CLASSI_FIN
+0    75344
+1    75344
+2    75344
+Name: count, dtype: int64
+(226032, 26)
+
+BINARIO TREINO:
+CLASSI_FIN
+1    52740
+0    52740
+Name: count, dtype: int64
+(105480, 26)
+
+
+BINARIO TESTE:
+CLASSI_FIN
+1    22604
+0    22604
+Name: count, dtype: int64
+(45208, 26)
+
+
+MULTICLASSE TREINO:
+CLASSI_FIN
+1    52740
+0    52740
+2    52740
+Name: count, dtype: int64
+(158220, 26)
+
+MULTICLASSE TESTE:
+CLASSI_FIN
+1    22604
+0    22604
+2    22604
+Name: count, dtype: int64
+(67812, 26)
+
+
+
+
+OTIMIZAÇÃO DE HIPERPARAMETROS
+
+ARVORE DE DECISAO - MODELO BINARIO
+{'criterion': 'gini', 'max_depth': 11, 'max_features': None}
+SCORE: 0.703242	
+
+FLORESTA ALEATORIA - MODELO BINARIO
+{'criterion': 'entropy', 'min_samples_leaf': 5, 'n_estimators': 220}
+SCORE 0.721900	
+
+ARVORE DE DECISAO - MODELO MULTICLASSE
+{'criterion': 'gini', 'max_depth': 12, 'max_features': None}
+SCORE: 0.561712	
+
+FLORESTA ALEATORIA - MODELO MULTICLASSE
+{'criterion': 'entropy', 'min_samples_leaf': 5, 'n_estimators': 230}
+SCORE: 0.588004	
+
+
+
+AVALIACAO - RANDOM STATE 42
+
+ARVORE DE DECISAO - MODELO BINARIO 
+TESTE:
+{'0': {'precision': 0.7040091739072906,
+  'recall': 0.706158202088126,
+  'f1-score': 0.7050820504892109,
+  'support': 22604.0},
+ '1': {'precision': 0.7052584867983137,
+  'recall': 0.7031056450185807,
+  'f1-score': 0.704180420478965,
+  'support': 22604.0},
+ 'accuracy': 0.7046319235533534,
+ 'macro avg': {'precision': 0.7046338303528021,
+  'recall': 0.7046319235533534,
+  'f1-score': 0.704631235484088,
+  'support': 45208.0},
+
+array([[15962,  6642],
+       [ 6711, 15893]]) 
+        
+TREINO:    
+{'0': {'precision': 0.7312956810631229,
+  'recall': 0.730394387561623,
+  'f1-score': 0.730844756438837,
+  'support': 52740.0},
+ '1': {'precision': 0.7307262569832402,
+  'recall': 0.7316268486916951,
+  'f1-score': 0.731176275522289,
+  'support': 52740.0},
+ 'accuracy': 0.7310106181266591,
+ 'macro avg': {'precision': 0.7310109690231816,
+  'recall': 0.7310106181266591,
+  'f1-score': 0.731010515980563,
+  'support': 105480.0},
+
+array([[38521, 14219],
+       [14154, 38586]])
+
+FLORESTA ALEATORIA - MODELO BINARIO        
+TESTE:
+{'0': {'precision': 0.7145542312785681,
+  'recall': 0.7400017695983012,
+  'f1-score': 0.7270553973876948,
+  'support': 22604.0},
+ '1': {'precision': 0.7304004770861049,
+  'recall': 0.7043886037869403,
+  'f1-score': 0.7171587505348738,
+  'support': 22604.0},
+ 'accuracy': 0.7221951866926207,
+ 'macro avg': {'precision': 0.7224773541823365,
+  'recall': 0.7221951866926208,
+  'f1-score': 0.7221070739612843,
+  'support': 45208.0},
+
+array([[16727,  5877],
+       [ 6682, 15922]])
+       
+TREINO: 
+
+{'0': {'precision': 0.7658834412580944,
+  'recall': 0.784907091391733,
+  'f1-score': 0.7752785841370915,
+  'support': 52740.0},
+ '1': {'precision': 0.7794283492125219,
+  'recall': 0.7600682593856656,
+  'f1-score': 0.7696265719496976,
+  'support': 52740.0},
+ 'accuracy': 0.7724876753886992,
+ 'macro avg': {'precision': 0.7726558952353082,
+  'recall': 0.7724876753886993,
+  'f1-score': 0.7724525780433946,
+  'support': 105480.0},
+ 
+
+array([[41396, 11344],
+       [12654, 40086]])
+       
+ARVORE DE DECISAO - MODELO MULTICLASSE  
+TESTE:  
+
+{'0': {'precision': 0.49620368077907073, 
+  'recall': 0.5319854892939303,
+  'f1-score': 0.5134719672061147,
+  'support': 22604.0},
+ '1': {'precision': 0.6193407377670725,
+  'recall': 0.6142718102990621,
+  'f1-score': 0.616795859893832,
+  'support': 22604.0},
+ '2': {'precision': 0.5832506262110686,
+  'recall': 0.5459653158732968, 
+  'f1-score': 0.5639924136827914,
+  'support': 22604.0},
+ 'accuracy': 0.5640742051554297, 
+ 'macro avg': {'precision': 0.5662650149190707,
+  'recall': 0.5640742051554297,
+  'f1-score': 0.564753413594246,
+  'support': 67812.0},
+
+array([[12025,  4980,  5599],
+       [ 5500, 13885,  3219],
+       [ 6709,  3554, 12341]])
+
+
+TREINO:
+{'0': {'precision': 0.5358712604565433,  
+  'recall': 0.5733029958285931,
+  'f1-score': 0.5539555164706313,
+  'support': 52740.0},
+ '1': {'precision': 0.6503008103850753,
+  'recall': 0.6496966249525976,
+  'f1-score': 0.6499985772685453,
+  'support': 52740.0},
+ '2': {'precision': 0.6386518684451685,
+  'recall': 0.5946340538490709,
+  'f1-score': 0.6158574304089548,
+  'support': 52740.0},
+ 'accuracy': 0.6058778915434205,
+ 'macro avg': {'precision': 0.608274646428929,
+  'recall': 0.6058778915434205,
+  'f1-score': 0.6066038413827105,
+  'support': 158220.0},
+
+array([[30236, 11075, 11429],
+       [12160, 34265,  6315],
+       [14028,  7351, 31361]])
+
+FLORESTA ALEATORIA - MODELO MULTICLASSE    
+TESTE:
+{'0': {'precision': 0.5279210994931738,
+  'recall': 0.5115023889577066,
+  'f1-score': 0.5195820694304011,
+  'support': 22604.0},
+ '1': {'precision': 0.6329628046173579,
+  'recall': 0.6549725712263316,
+  'f1-score': 0.643779623429143,
+  'support': 22604.0},
+ '2': {'precision': 0.6038364193419475,
+  'recall': 0.6016191824455849,
+  'f1-score': 0.6027257617728532,
+  'support': 22604.0},
+ 'accuracy': 0.5893647142098744,
+ 'macro avg': {'precision': 0.588240107817493,
+  'recall': 0.5893647142098742,
+  'f1-score': 0.5886958182107991,
+  'support': 67812.0},
+ 
+ array([[11562,  5156,  5886],
+       [ 4763, 14805,  3036],
+       [ 5576,  3429, 13599]])
+
+TREINO: 
+{'0': {'precision': 0.6193578681692786,
+  'recall': 0.6002275312855517,
+  'f1-score': 0.6096426611202588,
+  'support': 52740.0},
+ '1': {'precision': 0.6854651162790698,
+  'recall': 0.715358361774744,
+  'f1-score': 0.7000927815921322,
+  'support': 52740.0},
+ '2': {'precision': 0.6831127926405347,
+  'recall': 0.6744216913158892,
+  'f1-score': 0.6787394212329094,
+  'support': 52740.0},
+ 'accuracy': 0.6633358614587284,
+ 'macro avg': {'precision': 0.6626452590296277,
+  'recall': 0.6633358614587284,
+  'f1-score': 0.6628249546484335,
+  'support': 158220.0},
+
+  array([[31656, 10424, 10660],
+       [ 9172, 37728,  5840],
+       [10283,  6888, 35569]])
+
+#######################################################################   
+
+VALIDAÇÃO CRUZADA:
+
+
+Arvore de decisão - tipo binario - avaliação teste: 
+acuracia:  0.7046637763227749
+precision:  0.7052439482944984
+recall:  0.7046637763227749
+f1-score:  0.7044552349554845
+suporte:  45208.0
+
+
+classe DENGUE (1): 
+precision:  0.7151141701654342
+recall:  0.6806436913820564
+f1-score:  0.6973542310842188
+support:  22604.0
+
+
+classe OUTRAS DOENCAS (0): 
+precision:  0.6953737264235628
+recall:  0.728683861263493
+f1-score:  0.7115562388267499
+support:  22604.0
+
+Arvore de decisão - tipo binario - avaliação treino: 
+acuracia:  0.7315416192643156
+precision:  0.7321668409667587
+recall:  0.7315416192643156
+f1-score:  0.7313612794167271
+suporte:  105480.0
+
+
+classe DENGUE (1): 
+precision:  0.7431235878735314
+recall:  0.7079802806219186
+f1-score:  0.7250333461566357
+support:  52740.0
+
+
+classe OUTRAS DOENCAS (0): 
+precision:  0.7212100940599859
+recall:  0.7551029579067122
+f1-score:  0.7376892126768186
+support:  52740.0
+
+#######################################################################
+
+Floresta Aleatoria - tipo binario - avaliação teste: 
+acuracia:  0.7214147938417979
+precision:  0.721592934626644
+recall:  0.7214147938417979
+f1-score:  0.7213587988914761
+suporte:  45208.0
+
+
+classe DENGUE (1): 
+precision:  0.7277871279855106
+recall:  0.7074389488586091
+f1-score:  0.7174645197396166
+support:  22604.0
+
+
+classe OUTRAS DOENCAS (0): 
+precision:  0.7153987412677774
+recall:  0.7353906388249868
+f1-score:  0.7252530780433364
+support:  22604.0
+
+
+
+Floresta Aleatoria - tipo binario - avaliação treino: 
+acuracia:  0.7730013272658323
+precision:  0.7731699765497053
+recall:  0.7730013272658323
+f1-score:  0.7729662869840207
+suporte:  105480.0
+
+
+classe DENGUE (1): 
+precision:  0.7799202057492116
+recall:  0.760646188850967
+f1-score:  0.7701612605322308
+support:  52740.0
+
+
+classe OUTRAS DOENCAS (0): 
+precision:  0.7664197473501989
+recall:  0.7853564656806976
+f1-score:  0.7757713134358103
+support:  52740.0
+
+#######################################################################
+
+Arvore de decisão - tipo multiclasse - avaliação teste: 
+acuracia:  0.563398366070902
+precision:  0.5659750791526078
+recall:  0.563398366070902
+f1-score:  0.5639663189143896
+suporte:  67812.0
+
+
+classe CHIKUNGUNYA (2): 
+precision:  0.5903619536317711
+recall:  0.5390147761458148
+f1-score:  0.5634505781409497
+support:  22604.0
+
+
+classe DENGUE (1): 
+precision:  0.6133728907368692
+recall:  0.6179525747655282
+f1-score:  0.6155653871352701
+support:  22604.0
+
+
+classe OUTRAS DOENCAS (0): 
+precision:  0.4941903930891832
+recall:  0.5332277473013627
+f1-score:  0.5128829914669488
+support:  22604.0
+
+
+Arvore de decisão - tipo multiclasse - avaliação treino: 
+acuracia:  0.6063275818480596
+precision:  0.6091956784997946
+recall:  0.6063275818480596
+f1-score:  0.6069916552025135
+suporte:  158220.0
+
+
+classe CHIKUNGUNYA (2): 
+precision:  0.6437295881927796
+recall:  0.5877688661357603
+f1-score:  0.6144112636845006
+support:  52740.0
+
+
+classe DENGUE (1): 
+precision:  0.647255065001481
+recall:  0.6531126279863482
+f1-score:  0.6500792034625165
+support:  52740.0
+
+
+classe OUTRAS DOENCAS (0): 
+precision:  0.5366023823051236
+recall:  0.5781012514220705
+f1-score:  0.5564844984605231
+support:  52740.0
+
+
+
+Floresta Aleatoria - tipo multiclasse - avaliação teste: 
+acuracia:  0.5889128767769718
+precision:  0.58767518425578
+recall:  0.5889128767769718
+f1-score:  0.5881380946218017
+suporte:  67812.0
+
+
+classe CHIKUNGUNYA (2): 
+precision:  0.6054531299873843
+recall:  0.6002734029375332
+f1-score:  0.6028445684286924
+support:  22604.0
+
+
+classe DENGUE (1): 
+precision:  0.6305724698236852
+recall:  0.6574212528755972
+f1-score:  0.6437110508200586
+support:  22604.0
+
+
+classe OUTRAS DOENCAS (0): 
+precision:  0.5269999529562706
+recall:  0.5090439745177845
+f1-score:  0.5178586646166542
+support:  22604.0
+
+
+Floresta Aleatoria - tipo multiclasse - avaliação treino: 
+acuracia:  0.6638052079383137
+precision:  0.6631782700890285
+recall:  0.6638052079383137
+f1-score:  0.6633215249622024
+suporte:  158220.0
+
+
+classe CHIKUNGUNYA (2): 
+precision:  0.6836743108938194
+recall:  0.6724981039059539
+f1-score:  0.6780377539445978
+support:  52740.0
+
+
+classe DENGUE (1): 
+precision:  0.6858980791319841
+recall:  0.7164032992036404
+f1-score:  0.7008168776129221
+support:  52740.0
+
+
+classe OUTRAS DOENCAS (0): 
+precision:  0.6199624202412819
+recall:  0.602514220705347
+f1-score:  0.611109943329088
+support:  52740.0
+
+
+
+
+
